@@ -33,15 +33,16 @@ python3 -m http.server 8000 --bind 127.0.0.1
 Open `http://127.0.0.1:8000/` and `http://127.0.0.1:8000/humanoids2026/`.
 Check desktop and mobile layouts, the navigation menu, in-page anchors, and the
 links between the organization and workshop pages after editing. At approximately
-390 × 844 pixels, the workshop title, conference, date, location, CFP status, and
-CFP/submission links should fit in the first viewport. The workshop illustration
+390 × 844 pixels, the workshop title, conference, date, location, CFP/demo status,
+and paper/demo links should fit in the first viewport. The workshop illustration
 is hidden on narrow screens to prioritize this information.
 
 Check direct links to `#overview`, `#topics`, `#call-for-papers`, `#important-dates`,
-`#submission`, `#speakers`, `#organizers`, and `#contact`. During manual scrolling,
-navigation follows the top reading position and selects the last section at the
-page's end. Direct links highlight the requested section, including targets near
-the footer. The nested Submission section maps to CFP; Dates has its own link.
+`#submission`, `#call-for-demos`, `#speakers`, `#organizers`, and `#contact`. During
+manual scrolling, navigation follows the top reading position and selects the
+last section at the page's end. Direct links highlight the requested section,
+including targets near the footer. The nested Paper Submission and Call for Demos
+sections map to CFP & Demos; Dates has its own link.
 
 ## GitHub Pages
 
@@ -51,7 +52,7 @@ repository Pages settings are managed separately from these source files.
 
 ## Call for Papers requirements
 
-The submission requirements and dates come from the organizer-provided CFP text:
+The paper submission requirements and dates come from the organizer-provided CFP text:
 
 - **Short / Position Papers:** up to 4 pages.
 - **Research Papers:** up to 6 pages.
@@ -60,12 +61,25 @@ The submission requirements and dates come from the organizer-provided CFP text:
   submission.
 - **Presentation:** accepted submissions will be presented as posters; selected
   contributions will additionally be invited for short spotlight presentations.
+- **Paper submissions open:** October 2, 2026.
 - **Submission deadline:** October 25, 2026, 23:59 AoE.
 - **Acceptance notification:** November 2, 2026.
 
 **Non-archival is a proposed policy awaiting Workshop Chairs confirmation.**
 Do not announce it as confirmed. The workshop page retains “To be announced” for
 the publication policy.
+
+## Call for Demos
+
+The workshop also welcomes demos addressing humanoid safety and assurance, either
+in simulation or using physical robots, as requested by the organizer. The paper
+page limits, IEEE format, poster/spotlight arrangements, and paper dates above
+have not been assigned to demos.
+
+Demo submission materials, portal, dates, selection process, and presentation
+arrangements still need organizer confirmation, including whether an accompanying
+paper is required. Confirm space, equipment, and on-site arrangements before
+publishing physical robot demo logistics.
 
 ## Organizer input still needed
 
@@ -78,6 +92,9 @@ Update `humanoids2026/index.html` when these details are confirmed:
 - **Submission information** (`#submission`): portal URL, review process, and
   publication policy (including the proposed non-archival status above).
   Add an actual submission link only once a confirmed URL is available.
+- **Demos** (`#call-for-demos`, `#important-dates`): submission portal, required
+  materials, paper requirement if any, submission/notification dates, selection
+  process, presentation format, and logistics for simulation and physical robots.
 - **Invited speakers** (`#speakers`): confirmed names, affiliations, and talk
   details. No speaker identities or number of speakers have been assumed.
 - **Organizers** (`#organizers`): confirmed names, affiliations, and profile links.

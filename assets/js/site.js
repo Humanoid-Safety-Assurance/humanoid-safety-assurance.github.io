@@ -41,24 +41,64 @@
 
   mobileLayout.addEventListener("change", () => setMenuOpen(false));
 
-  // Hash links still work without JavaScript; this only highlights the current section.
-  const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
-  const sections = sectionLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
-  if (!("IntersectionObserver" in window) || sections.length === 0) return;
+  // Track section positions directly, including nested Dates and the page's end.
+  const sections = [...navigation.querySelectorAll('a[href^="#"]')]
+    .map((link) => ({ link, target: document.getElementById(link.hash.slice(1)) }))
+    .filter(({ target }) => target);
+  if (sections.length === 0) return;
+  let followHash = true;
 
-  const visibleSections = new Set();
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) visibleSections.add(entry.target);
-      else visibleSections.delete(entry.target);
+  const updateCurrentSection = () => {
+    if (toggle.getAttribute("aria-expanded") === "true") return;
+    const anchorOffset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+    let current = null;
+    sections.forEach((section) => {
+      const bounds = section.target.getBoundingClientRect();
+      if (bounds.top <= anchorOffset + 1 && bounds.bottom > anchorOffset + 1) current = section;
     });
 
-    const current = sections.find((section) => visibleSections.has(section));
-    sectionLinks.forEach((link) => {
-      if (current && link.hash === `#${current.id}`) link.setAttribute("aria-current", "location");
-      else link.removeAttribute("aria-current");
-    });
-  }, { rootMargin: "-15% 0px -55% 0px", threshold: 0 });
+    const atEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    if (atEnd) current = sections[sections.length - 1];
 
-  sections.forEach((section) => observer.observe(section));
+    // Respect explicit links, including ones too near the footer to align at the top.
+    const anchor = document.getElementById(location.hash.slice(1));
+    const anchorTop = anchor?.getBoundingClientRect().top;
+    if (followHash && anchor && (Math.abs(anchorTop - anchorOffset) <= 2
+      || (atEnd && anchorTop >= anchorOffset && anchorTop < window.innerHeight))) {
+      current = sections.find(({ target }) => target === anchor)
+        || sections.find(({ target }) => target.contains(anchor))
+        || current;
+    }
+    sections.forEach((section) => {
+      if (section === current) section.link.setAttribute("aria-current", "location");
+      else section.link.removeAttribute("aria-current");
+    });
+  };
+
+  let framePending = false;
+  const scheduleUpdate = () => {
+    if (framePending) return;
+    framePending = true;
+    requestAnimationFrame(() => {
+      updateCurrentSection();
+      framePending = false;
+    });
+  };
+  window.addEventListener("scroll", scheduleUpdate, { passive: true });
+  window.addEventListener("resize", scheduleUpdate);
+  const followNavigation = () => { followHash = true; scheduleUpdate(); };
+  const followScrolling = () => { followHash = false; scheduleUpdate(); };
+  window.addEventListener("hashchange", followNavigation);
+  document.addEventListener("click", (event) => {
+    if (event.target.closest('a[href^="#"]')) followNavigation();
+  });
+  // Manual reading resumes position-based highlighting after a link was followed.
+  window.addEventListener("wheel", followScrolling, { passive: true });
+  window.addEventListener("touchmove", followScrolling, { passive: true });
+  window.addEventListener("pointerdown", followScrolling, { passive: true });
+  window.addEventListener("keydown", (event) => {
+    if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(event.key)) followScrolling();
+  });
+  window.addEventListener("load", scheduleUpdate);
+  scheduleUpdate();
 })();

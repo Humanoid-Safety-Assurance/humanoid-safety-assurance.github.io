@@ -25,9 +25,10 @@
         <span>Menu</span><span class="menu-icon" aria-hidden="true"></span>
       </button>
       <nav class="site-nav" id="primary-navigation" aria-label="Workshop navigation">
-        <a href="#overview">Overview</a>
+        <a href="#overview">About</a>
         <a href="#topics">Topics</a>
-        <a href="#call-for-papers">Call for papers</a>
+        <a href="#call-for-papers">CFP</a>
+        <a href="#important-dates">Dates</a>
         <a href="#speakers">Speakers</a>
         <a href="#organizers">Organizers</a>
         <a class="nav-action" href="#contact">Contact <span aria-hidden="true">↗</span></a>
@@ -41,11 +42,28 @@
         <div class="hero-copy">
           <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> IEEE-RAS Humanoids 2026</p>
           <p class="workshop-type">Full-day workshop</p>
-          <h1 id="workshop-title">From Capability<br><span class="text-teal">to Assurance:</span><span class="hero-subtitle">Trustworthy Humanoid Systems<br class="desktop-break"> in Human Environments</span></h1>
-          <p class="hero-description">Bridging what humanoids can do and the evidence we need to trust them in the spaces we share.</p>
+          <h1 id="workshop-title">
+            From Capability<br>
+            <span class="text-teal">to Assurance:</span>
+            <span class="hero-subtitle">Trustworthy Humanoid Systems<br class="desktop-break"> in Human Environments</span>
+          </h1>
+          <dl class="event-meta">
+            <div>
+              <dt>Date</dt>
+              <dd><time datetime="2026-12-07">December 7, 2026</time></dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Santa Clara, California</dd>
+            </div>
+          </dl>
+          <div class="cfp-status">
+            <p><strong>Call for Papers</strong> — Submission portal coming soon</p>
+            <p>Short / position papers and research papers on humanoid safety and assurance are welcome.</p>
+          </div>
           <div class="hero-actions">
-            <a class="button button-primary" href="#call-for-papers">Call for papers <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#overview">Explore the workshop <span aria-hidden="true">↓</span></a>
+            <a class="button button-primary" href="#call-for-papers">Call for papers <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#submission">Submission information <span aria-hidden="true">↓</span></a>
           </div>
         </div>
         <figure class="hero-figure">
@@ -53,11 +71,6 @@
           <img src="../assets/images/assurance-figure.svg" width="520" height="480" alt="A humanoid robot within an assurance boundary, with callouts for perception, safe interaction, and robust control.">
           <figcaption><span>Capability</span><span aria-hidden="true">→</span><span>Evidence</span><span aria-hidden="true">→</span><span>Assurance</span></figcaption>
         </figure>
-        <dl class="event-meta">
-          <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4m8-4v4M4 11h16m-11 5h6"/></svg>Date</dt><dd><time datetime="2026-12-07">December 7, 2026</time></dd></div>
-          <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Location</dt><dd>Santa Clara, California</dd></div>
-          <div><dt><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Format</dt><dd>Full-day workshop</dd></div>
-        </dl>
       </div>
     </section>
 
@@ -66,15 +79,36 @@
         <div class="editorial-grid">
           <p class="eyebrow section-label"><span class="section-index">01</span> The motivation</p>
           <div class="editorial-copy">
-            <h2 id="overview-title">Beyond capability.<br>Toward justified confidence.</h2>
-            <p>Demonstrating a humanoid’s capabilities is only one part of understanding whether it can operate safely around people. Human environments demand reliable behavior under uncertainty, awareness of physical and social risks, and evidence that a system’s safeguards hold beyond a successful demonstration.</p>
-            <p>This workshop brings together perspectives from humanoid robotics, safety, verification, human–robot interaction, and evaluation to explore how that evidence can be built, tested, and communicated.</p>
+            <h2 id="overview-title">Assurance across the humanoid system.</h2>
+            <p>
+              Humanoid safety requires more than safe AI models or safe robot control
+              considered in isolation. Learning-enabled humanoids connect perception,
+              reasoning, planning, whole-body action, physical interaction, runtime
+              supervision, and recovery.
+            </p>
+            <p>
+              Errors or uncertainty at one layer can propagate into unsafe contact,
+              balance loss, object dropping, or inappropriate whole-body actions around
+              people. This workshop examines how safeguards work across these layers
+              and what evidence can demonstrate their effectiveness under uncertainty
+              and failure.
+            </p>
           </div>
         </div>
         <div class="question-panel">
-          <div class="question-label"><span class="question-symbol" aria-hidden="true">?</span><p class="eyebrow">The central technical question</p></div>
-          <h3>How can we turn humanoid capability into credible, measurable assurance for safe and trustworthy operation in human environments?</h3>
-          <div class="question-footer"><span>Define the risks.</span><span>Build the evidence.</span><span>Justify the trust.</span></div>
+          <div class="question-label">
+            <span class="question-symbol" aria-hidden="true">?</span>
+            <p class="eyebrow">Central technical questions</p>
+          </div>
+          <h3>
+            How can humanoid systems perceive, reason, plan, act, and recover safely
+            under uncertainty and failure, and how can these safety mechanisms be
+            effectively evaluated?
+          </h3>
+          <h3 class="complementary-question">
+            What evidence is sufficient to trust a learning-enabled humanoid
+            operating physically around people?
+          </h3>
         </div>
       </div>
     </section>
@@ -82,48 +116,146 @@
     <section class="section section-tinted" id="topics" aria-labelledby="topics-title">
       <div class="container">
         <div class="section-heading heading-with-aside">
-          <div><p class="eyebrow"><span class="section-index">02</span> Topics of interest</p><h2 id="topics-title">The foundations of assurance.</h2></div>
-          <p class="section-intro">Connecting methods, systems, and evidence across the humanoid research community.</p>
+          <div>
+            <p class="eyebrow"><span class="section-index">02</span> Topics of interest</p>
+            <h2 id="topics-title">The foundations of assurance.</h2>
+          </div>
+          <p class="section-intro">Safeguards and evidence across learning, whole-body behavior, and physical interaction.</p>
         </div>
         <div class="topics-grid">
-          <article class="topic-item"><span class="item-number">01</span><div><h3>Safety-aware planning &amp; control</h3><p>Risk-sensitive decisions, physical constraints, contact-aware control, and runtime safety mechanisms.</p></div></article>
-          <article class="topic-item"><span class="item-number">02</span><div><h3>Verification, validation &amp; assurance</h3><p>Formal methods, safety cases, system-level testing, and evidence for trustworthy behavior.</p></div></article>
-          <article class="topic-item"><span class="item-number">03</span><div><h3>Human–humanoid interaction</h3><p>Safe physical collaboration, predictable behavior, human factors, and appropriate trust.</p></div></article>
-          <article class="topic-item"><span class="item-number">04</span><div><h3>Robustness &amp; failure recovery</h3><p>Uncertainty, distribution shifts, out-of-distribution detection, and recovery from failures.</p></div></article>
-          <article class="topic-item"><span class="item-number">05</span><div><h3>Benchmarks &amp; evaluation</h3><p>Simulation, real-world testing, meaningful metrics, and reproducible assessment of safety.</p></div></article>
-          <article class="topic-item"><span class="item-number">06</span><div><h3>Responsible deployment</h3><p>Operational boundaries, ongoing monitoring, incident learning, and lifecycle assurance.</p></div></article>
+          <article class="topic-item">
+            <span class="item-number">01</span>
+            <div>
+              <h3>Safety-aware planning &amp; control</h3>
+              <p>Linking reasoning and task plans to whole-body constraints, balance, and contact-aware action.</p>
+            </div>
+          </article>
+          <article class="topic-item">
+            <span class="item-number">02</span>
+            <div>
+              <h3>Verification, validation &amp; assurance</h3>
+              <p>Testing assumptions across learned components, controllers, and runtime safeguards; building system-level evidence.</p>
+            </div>
+          </article>
+          <article class="topic-item">
+            <span class="item-number">03</span>
+            <div>
+              <h3>Human–humanoid interaction</h3>
+              <p>Safe contact, object handling, and predictable whole-body behavior around people.</p>
+            </div>
+          </article>
+          <article class="topic-item">
+            <span class="item-number">04</span>
+            <div>
+              <h3>Runtime supervision &amp; recovery</h3>
+              <p>Detecting uncertainty and failures, supervising learned actions, and recovering from unsafe states.</p>
+            </div>
+          </article>
+          <article class="topic-item">
+            <span class="item-number">05</span>
+            <div>
+              <h3>Benchmarks &amp; evaluation</h3>
+              <p>Evaluating error propagation, physical consequences, and safeguard effectiveness in simulation and real-world tests.</p>
+            </div>
+          </article>
+          <article class="topic-item">
+            <span class="item-number">06</span>
+            <div>
+              <h3>Responsible deployment</h3>
+              <p>Defining operational boundaries and connecting monitoring and incident evidence to lifecycle assurance.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section" id="call-for-papers" aria-labelledby="cfp-title">
       <div class="container">
-        <div class="section-heading"><p class="eyebrow"><span class="section-index">03</span> Call for papers</p><h2 id="cfp-title">Help shape the assurance agenda.</h2></div>
+        <div class="section-heading">
+          <p class="eyebrow"><span class="section-index">03</span> Contribute to the workshop</p>
+          <h2 id="cfp-title">Call for Papers</h2>
+          <div class="section-actions" aria-label="Contribution information">
+            <a class="text-link" href="#submission">Submission information <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#important-dates">Important dates <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
         <div class="participation-grid">
           <div class="participation-copy">
-            <p class="lead">We invite contributions that connect humanoid capabilities with evidence of safety, reliability, and trustworthiness in human environments.</p>
-            <p>Relevant work may address technical methods, system design, evaluation practices, or open research challenges across the workshop topics. We are particularly interested in the connection between proposed safeguards and the evidence used to assess them.</p>
-            <div class="notice"><span class="notice-dot" aria-hidden="true"></span><div><strong>Submission details forthcoming</strong><p>The submission portal, requirements, and deadlines will be announced here once finalized.</p></div></div>
+            <p class="lead">
+              We invite contributions addressing safety and assurance for humanoid
+              systems operating in human environments.
+            </p>
+            <p>We welcome two types of submissions:</p>
+            <div class="submission-types">
+              <div>
+                <h3>Short / Position Papers <span>— up to 4 pages</span></h3>
+                <p>
+                  Early-stage research, position papers, preliminary results, failure
+                  analyses, benchmark proposals, safety architectures, and emerging
+                  research directions.
+                </p>
+              </div>
+              <div>
+                <h3>Research Papers <span>— up to 6 pages</span></h3>
+                <p>
+                  Substantially developed research contributions, including methods,
+                  system studies, experiments, benchmarks, and safety evaluation studies.
+                </p>
+              </div>
+            </div>
             <div class="submission-info" id="submission" aria-labelledby="submission-title">
               <h3 id="submission-title">Submission information</h3>
+              <p>
+                Submissions should use the IEEE standard double-column conference
+                format. One additional page may be used exclusively for references.
+                Appendices are not considered as part of the review submission.
+              </p>
+              <p>
+                Accepted submissions will be presented as posters. Selected contributions
+                will additionally be invited for short spotlight presentations.
+              </p>
               <dl class="details-list">
-                <div><dt>Submission portal</dt><dd><span class="pending-text">To be announced</span></dd></div>
-                <div><dt>Paper format &amp; page limit</dt><dd><span class="pending-text">To be announced</span></dd></div>
-                <div><dt>Review process</dt><dd><span class="pending-text">To be announced</span></dd></div>
-                <div><dt>Publication &amp; presentation</dt><dd><span class="pending-text">To be announced</span></dd></div>
+                <div>
+                  <dt>Submission portal</dt>
+                  <dd>To be announced</dd>
+                </div>
+                <div>
+                  <dt>Review process</dt>
+                  <dd>To be announced</dd>
+                </div>
+                <div>
+                  <dt>Publication policy</dt>
+                  <dd>To be announced</dd>
+                </div>
               </dl>
             </div>
           </div>
           <aside class="dates-panel" id="important-dates" aria-labelledby="dates-title">
-            <div class="panel-heading"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4m8-4v4M4 11h16m-11 5h6"/></svg><h3 id="dates-title">Important dates</h3></div>
-            <p class="panel-intro">Key milestones for participating.</p>
+            <div class="panel-heading">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="5" width="16" height="16" rx="2"/>
+                <path d="M8 3v4m8-4v4M4 11h16m-11 5h6"/>
+              </svg>
+              <h3 id="dates-title">Important dates</h3>
+            </div>
             <dl class="dates-list">
-              <div><dt>Paper submission deadline</dt><dd>To be announced</dd></div>
-              <div><dt>Acceptance notification</dt><dd>To be announced</dd></div>
-              <div><dt>Camera-ready deadline</dt><dd>To be announced</dd></div>
-              <div class="confirmed-date"><dt>Workshop day</dt><dd><time datetime="2026-12-07">December 7, 2026</time><span>Santa Clara, California</span></dd></div>
+              <div>
+                <dt>Paper submission deadline</dt>
+                <dd>
+                  <time datetime="2026-10-25">October 25, 2026</time><br>
+                  23:59 AoE
+                </dd>
+              </div>
+              <div>
+                <dt>Acceptance notification</dt>
+                <dd><time datetime="2026-11-02">November 2, 2026</time></dd>
+              </div>
+              <div class="confirmed-date">
+                <dt>Workshop day</dt>
+                <dd><time datetime="2026-12-07">December 7, 2026</time></dd>
+              </div>
             </dl>
-            <p class="panel-note">Submission dates and deadline time zones are pending confirmation.</p>
+            <p class="panel-note">AoE: Anywhere on Earth.</p>
           </aside>
         </div>
       </div>
@@ -131,36 +263,56 @@
 
     <section class="section section-tinted" id="speakers" aria-labelledby="speakers-title">
       <div class="container">
-        <div class="section-heading heading-with-aside"><div><p class="eyebrow"><span class="section-index">04</span> Perspectives from the field</p><h2 id="speakers-title">Invited speakers</h2></div><span class="status-label">To be announced</span></div>
-        <div class="announcement-panel">
-          <div class="announcement-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="15" y="5" width="10" height="20" rx="5"/><path d="M10 19v2a10 10 0 0 0 20 0v-2M20 31v5m-6 0h12"/></svg></div>
-          <div><h3>Speakers will be announced here.</h3><p>The invited speaker lineup is being finalized. Names, affiliations, and talk details will appear here once confirmed.</p></div>
+        <div class="section-heading compact-heading">
+          <p class="eyebrow"><span class="section-index">04</span> Speakers</p>
+          <h2 id="speakers-title">Invited Speakers</h2>
         </div>
+        <p class="status-label">To be announced.</p>
       </div>
     </section>
 
     <section class="section" id="organizers" aria-labelledby="organizers-title">
       <div class="container editorial-grid">
-        <div><p class="eyebrow"><span class="section-index">05</span> The people behind the workshop</p><h2 id="organizers-title">Organizers</h2></div>
-        <div class="organizer-placeholder"><span class="status-label">To be announced</span><h3>Organizer details are forthcoming.</h3><p>The confirmed organizing committee, affiliations, and profile links will be listed here.</p></div>
+        <div>
+          <p class="eyebrow"><span class="section-index">05</span> Organizing committee</p>
+          <h2 id="organizers-title">Organizers</h2>
+        </div>
+        <div class="organizer-placeholder">
+          <span class="status-label">To be announced</span>
+          <p>Organizer names, affiliations, and profile links will appear here once confirmed.</p>
+        </div>
       </div>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container contact-grid">
-        <div><p class="eyebrow"><span class="section-index">06</span> Get in touch</p><h2 id="contact-title">Let’s build the conversation.</h2><p>For questions about contributions, participation, or the workshop, contact details will be published here once confirmed.</p></div>
-        <div class="contact-card"><span class="contact-label">Workshop contact</span><strong>To be announced</strong><p>The organizer email address is forthcoming.</p></div>
+        <div>
+          <p class="eyebrow"><span class="section-index">06</span> Get in touch</p>
+          <h2 id="contact-title">Contact</h2>
+          <p>Contact details for questions about contributions or participation will appear here once confirmed.</p>
+        </div>
+        <div class="contact-card">
+          <span class="contact-label">Workshop contact</span>
+          <strong>To be announced</strong>
+          <p>The organizer email address is forthcoming.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-main">
-      <a class="brand" href="../"><img src="../assets/images/mark.svg" width="32" height="32" alt=""><span>Humanoid Safety<span class="brand-second-line">&amp; Assurance</span></span></a>
+      <a class="brand" href="../">
+        <img src="../assets/images/mark.svg" width="32" height="32" alt="">
+        <span>Humanoid Safety<span class="brand-second-line">&amp; Assurance</span></span>
+      </a>
       <p>IEEE-RAS Humanoids 2026 · Full-day workshop</p>
       <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </div>
-    <div class="container footer-bottom"><span>© 2026 Humanoid Safety &amp; Assurance</span><a href="../">Organization homepage <span aria-hidden="true">↗</span></a></div>
+    <div class="container footer-bottom">
+      <span>© 2026 Humanoid Safety &amp; Assurance</span>
+      <a href="../">Organization homepage <span aria-hidden="true">↗</span></a>
+    </div>
   </footer>
 </body>
 </html>

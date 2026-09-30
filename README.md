@@ -81,6 +81,43 @@ arrangements still need organizer confirmation, including whether an accompanyin
 paper is required. Confirm space, equipment, and on-site arrangements before
 publishing physical robot demo logistics.
 
+## Organizers and photos
+
+The five organizer cards use the names, roles, and affiliations in the
+**List of Organizers** section of the supplied `Humanoids2026 Workshop proposal.pdf`.
+Display order follows the organizer's requested ordering in the HTML. Cards show
+the name, role, affiliation, and photo or placeholder. Email is listed only in the
+Contact section, using the address supplied for Zijun Sha. The PDF's
+“Toyota Motor North American” spelling is normalized to
+[Toyota Motor North America](https://pressroom.toyota.com/toyota-motor-north-america-announces-executive-changes-15/),
+the official company name. No personal profile links have been added.
+
+Chuchu Chen and Zijun Sha have local copies of the portraits identified by name on
+the [IROS 2026 workshop Speakers & Team page](https://chuchuchen.net/robotworker-26/speakers/),
+retrieved on September 30, 2026. The original image files are preserved; CSS fits
+them into the shared 4:5 portrait frames.
+
+| Local image | Original source |
+| --- | --- |
+| `assets/images/organizers/chuchu-chen.jpg` | [Chuchu Chen portrait](https://chuchuchen.net/images/workshop/chuchu-chen.jpg) |
+| `assets/images/organizers/zijun-sha.jpg` | [Zijun Sha portrait](https://chuchuchen.net/images/workshop/zijun-sha.jpg) |
+
+Georgios Fainekos, Hideki Okamoto, and Abhijeet Kulkarni retain clearly labeled
+photo placeholders. When their portraits are available, add the files under
+`assets/images/organizers/` and replace each person's
+placeholder `<div class="organizer-photo">…</div>` with an image, for example:
+
+```html
+<img class="organizer-photo" src="../assets/images/organizers/zijun-sha.jpg"
+     width="240" height="300" alt="Zijun Sha" loading="lazy">
+```
+
+Keep the `organizer-photo` class and a 4:5 portrait crop. The layout uses a row of
+five cards on wide screens, three columns on tablets, and one column with photos
+beside the details on phones. Keep remaining placeholders as HTML until actual
+photos are supplied, to avoid broken image URLs. Update the Contact section if
+the workshop email address changes.
+
 ## Organizer input still needed
 
 The date **December 7, 2026**, location **Santa Clara, California**, and
@@ -97,9 +134,10 @@ Update `humanoids2026/index.html` when these details are confirmed:
   process, presentation format, and logistics for simulation and physical robots.
 - **Invited speakers** (`#speakers`): confirmed names, affiliations, and talk
   details. No speaker identities or number of speakers have been assumed.
-- **Organizers** (`#organizers`): confirmed names, affiliations, and profile links.
-- **Contact** (`#contact`): confirmed organizer email address. Add a `mailto:` link
-  only once the address is known.
+- **Organizers** (`#organizers`): portraits for Georgios Fainekos, Hideki Okamoto,
+  and Abhijeet Kulkarni, plus optional personal profile links.
+  The names, roles, and affiliations are populated from the proposal; the workshop
+  email is provided separately in the Contact section.
 
 The two central questions and the cross-layer safety perspective follow the
 provided workshop brief. The supporting motivation, topic descriptions, and CFP

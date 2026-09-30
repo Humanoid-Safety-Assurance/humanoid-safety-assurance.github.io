@@ -134,8 +134,14 @@ p + p { margin-top: 18px; }
 .confirmed-date time { color: var(--ink); font-size: 22px; letter-spacing: -.7px; font-weight: 550; }
 .panel-note { border-top: 1px solid var(--line); padding-top: 16px; font-size: 11px; line-height: 1.65; }
 .status-label { display: inline-block; width: fit-content; flex-shrink: 0; padding: 4px 11px; border: 1px solid #d1dbd3; border-radius: 4px; color: #627167; background: #f3f6f2; font-size: 13px; letter-spacing: .2px; }
-.organizer-placeholder { padding-left: 32px; border-left: 2px solid var(--line); }
-.organizer-placeholder p { max-width: 570px; margin-top: 10px; font-size: 15px; }
+.organizer-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; }
+.organizer-card { min-width: 0; }
+.organizer-photo { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 180px; aspect-ratio: 4 / 5; border: 1px solid var(--line); border-radius: 4px; background: var(--wash); object-fit: cover; }
+.organizer-photo span { padding: 12px; font-size: 13px; text-align: center; }
+.organizer-details { margin-top: 18px; }
+.organizer-details h3 { font-size: 19px; }
+.organizer-role { margin-top: 8px; font-size: 14px; }
+.organizer-affiliation { margin-top: 4px; font-size: 14px; }
 .contact-section { padding-block: 64px; background: var(--ink); color: #c0d0d4; }
 .contact-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: center; gap: 90px; }
 .contact-section .eyebrow { color: var(--mint); margin-bottom: 18px; }
@@ -145,6 +151,8 @@ p + p { margin-top: 18px; }
 .contact-card { border-left: 1px solid #4a6472; padding: 12px 0 12px 36px; }
 .contact-label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--mint); }
 .contact-card strong { display: block; margin-top: 8px; font-size: 23px; font-weight: 450; color: white; }
+.contact-email { display: inline-block; max-width: 100%; min-height: 44px; padding-block: 8px; color: white; font-size: 15px; overflow-wrap: anywhere; }
+.contact-email:hover { color: var(--mint); }
 .contact-card p:not(.eyebrow) { margin-top: 6px; font-size: 12px; }
 
 /* Organization homepage. */
@@ -187,6 +195,7 @@ p + p { margin-top: 18px; }
   .hero-actions { gap: 16px; }
   .desktop-break { display: none; }
   .participation-grid { gap: 42px; }
+  .organizer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 28px; }
   .editorial-grid { gap: 48px; }
   .heading-with-aside { align-items: start; }
   .heading-with-aside .section-intro { max-width: 280px; }
@@ -290,7 +299,9 @@ p + p { margin-top: 18px; }
   .dates-panel { padding: 26px; }
   .dates-list > div { padding-block: 16px; }
   .panel-note, .contact-label, .contact-card p:not(.eyebrow) { font-size: 13px; }
-  .organizer-placeholder { padding-left: 23px; }
+  .organizer-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .organizer-card { display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: start; gap: 20px; }
+  .organizer-details { margin-top: 0; }
   .contact-section { padding-block: 46px; }
   .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .contact-section h2 { font-size: 30px; }
@@ -323,6 +334,7 @@ p + p { margin-top: 18px; }
   .hero-subtitle { font-size: 23px; }
   .hero-actions { gap: 10px; }
   .details-list > div { flex-direction: column; gap: 2px; }
+  .organizer-card { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; }
   .figure-heading { padding-inline: 12px; }
   .event-meta > div, .event-meta > div:first-child { grid-template-columns: 75px 1fr; gap: 8px; }
   .question-panel { padding-inline: 20px; }
@@ -344,6 +356,7 @@ p + p { margin-top: 18px; }
   .question-panel, .contact-section { background: white; border: 1px solid #aaa; color: #222; }
   .question-panel h3, .contact-section h2, .contact-card strong, .question-label .eyebrow, .contact-section .eyebrow, .contact-label { color: #222; }
   .contact-section { padding: 24px; }
-  .topic-item, .dates-panel, .question-panel, .event-card { break-inside: avoid; }
+  .topic-item, .dates-panel, .question-panel, .event-card, .organizer-card { break-inside: avoid; }
+  .contact-email { color: #222; }
   .site-footer { margin-top: 24px; }
 }

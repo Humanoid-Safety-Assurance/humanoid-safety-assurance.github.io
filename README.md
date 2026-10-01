@@ -14,7 +14,7 @@ in Human Environments**.
 | `assets/js/site.js` | Accessible mobile menu and scroll-position navigation highlighting |
 | `assets/images/mark.svg` | Community mark and favicon; not an IEEE logo |
 | `assets/images/assurance-figure.svg` | Original illustrative humanoid diagram |
-| `assets/images/openreview-submission-qr.svg` | Static QR code for the paper submission portal |
+| `assets/images/openreview-submission-qr.svg` | Static QR code for the shared paper and demo submission portal |
 | `.nojekyll` | Serve the static files without Jekyll processing |
 | `CNAME` | Existing custom domain configuration |
 
@@ -60,21 +60,23 @@ The paper submission requirements and dates come from the organizer-provided CFP
 - **Format:** IEEE standard double-column conference format; one additional page
   exclusively for references. Appendices are not considered part of the review
   submission.
+- **Review process:** single-blind review. Authors do not need to anonymize their
+  submissions, as confirmed by the organizer.
 - **Presentation:** accepted submissions will be presented as posters; selected
   contributions will additionally be invited for short spotlight presentations.
 - **Paper submissions open:** October 2, 2026.
 - **Submission deadline:** October 25, 2026, 23:59 AoE.
 - **Acceptance notification:** November 2, 2026.
 
-The confirmed paper submission portal is
+The confirmed submission portal for papers and demos is
 [OpenReview](https://openreview.net/group?id=IEEE.org/RAS/Humanoids/2026/Workshop/Trustworthy_Humanoid_Systems).
-The hero link, submission button, and clickable QR code use this exact URL, with
-no fragment. The paper opening date remains October 2, 2026; the demo submission
-portal is still awaiting confirmation.
+The hero link, both submission buttons, and clickable QR code use this exact URL,
+with no fragment. The paper opening date remains October 2, 2026. Demo dates and
+presentation arrangements still need organizer confirmation.
 
 The QR code is a pre-generated, local SVG with a white background, a four-module
 quiet zone, and Q error correction. It needs no browser library or external QR
-service. If the portal URL changes, update all three links in
+service. If the portal URL changes, update all OpenReview links in
 `humanoids2026/index.html` and regenerate `assets/images/openreview-submission-qr.svg`
 together. Verify that the QR code rendered in the browser decodes to the same URL.
 
@@ -84,15 +86,25 @@ the publication policy.
 
 ## Call for Demos
 
-The workshop also welcomes demos addressing humanoid safety and assurance, either
-in simulation or using physical robots, as requested by the organizer. The paper
-page limits, IEEE format, poster/spotlight arrangements, and paper dates above
-have not been assigned to demos.
+The workshop also welcomes demos addressing humanoid safety and assurance using
+simulation, portable equipment, or physical robots, as requested by the organizer.
+The paper page limits, IEEE format, poster/spotlight arrangements, and paper dates
+above have not been assigned to demos.
 
-Demo submission materials, portal, dates, selection process, and presentation
-arrangements still need organizer confirmation, including whether an accompanying
-paper is required. Confirm space, equipment, and on-site arrangements before
-publishing physical robot demo logistics.
+Demo submissions use the same OpenReview portal as papers, as confirmed by the
+organizer. The organizer has confirmed these requirements:
+
+- **File format:** any file format is accepted.
+- **Title / heading:** the submitted document's title or heading must clearly
+  include the word **Demo**.
+- **Materials:** include a demo video or animation and a brief description of the
+  demo's functionality. Clearly identify whether it uses simulation, portable
+  equipment, or a physical robot.
+- **Equipment:** applicants are generally expected to bring their own demo
+  equipment and must specify any additional requirements in their submission.
+
+Demo submission/notification dates, selection process, presentation format and
+schedule, and on-site setup arrangements still need organizer confirmation.
 
 ## Organizers and photos
 
@@ -139,11 +151,12 @@ information is visibly marked “To be announced” or “forthcoming.”
 
 Update `humanoids2026/index.html` when these details are confirmed:
 
-- **Submission information** (`#submission`): review process and publication
-  policy (including the proposed non-archival status above).
-- **Demos** (`#call-for-demos`, `#important-dates`): submission portal, required
-  materials, paper requirement if any, submission/notification dates, selection
-  process, presentation format, and logistics for simulation and physical robots.
+- **Submission information** (`#submission`): publication policy (including the
+  proposed non-archival status above).
+- **Demos** (`#call-for-demos`, `#important-dates`): submission/notification dates,
+  selection process, presentation format and schedule, and on-site setup
+  arrangements. File format, title labeling, demo materials, and applicant
+  equipment responsibilities are confirmed above.
 - **Invited speakers** (`#speakers`): confirmed names, affiliations, and talk
   details. No speaker identities or number of speakers have been assumed.
 - **Organizers** (`#organizers`): portraits for Georgios Fainekos, Hideki Okamoto,
@@ -161,6 +174,12 @@ policies have been assumed.
 Keep workshop-specific participation details in `humanoids2026/index.html`.
 Update the hero CFP status when the submission process is confirmed. The homepage
 links to the workshop rather than duplicating its submission requirements.
+
+Both HTML pages include a `?v=` version in the stylesheet URL so browsers can
+request updated CSS instead of reusing an older cached stylesheet. After editing
+`assets/css/site.css`, use the first 12 characters of its SHA-256 hash (from
+`sha256sum assets/css/site.css`) as the version in both `index.html` and
+`humanoids2026/index.html`. This is a manual maintenance step, with no build tool.
 
 The workshop date appears in the hero and Important Dates for readers' convenience;
 the title, date, and location also appear in the homepage event card and page

@@ -14,6 +14,7 @@ in Human Environments**.
 | `assets/js/site.js` | Accessible mobile menu and scroll-position navigation highlighting |
 | `assets/images/mark.svg` | Community mark and favicon; not an IEEE logo |
 | `assets/images/assurance-figure.svg` | Original illustrative humanoid diagram |
+| `assets/images/openreview-submission-qr.svg` | Static QR code for the paper submission portal |
 | `.nojekyll` | Serve the static files without Jekyll processing |
 | `CNAME` | Existing custom domain configuration |
 
@@ -64,6 +65,18 @@ The paper submission requirements and dates come from the organizer-provided CFP
 - **Paper submissions open:** October 2, 2026.
 - **Submission deadline:** October 25, 2026, 23:59 AoE.
 - **Acceptance notification:** November 2, 2026.
+
+The confirmed paper submission portal is
+[OpenReview](https://openreview.net/group?id=IEEE.org/RAS/Humanoids/2026/Workshop/Trustworthy_Humanoid_Systems).
+The hero link, submission button, and clickable QR code use this exact URL, with
+no fragment. The paper opening date remains October 2, 2026; the demo submission
+portal is still awaiting confirmation.
+
+The QR code is a pre-generated, local SVG with a white background, a four-module
+quiet zone, and Q error correction. It needs no browser library or external QR
+service. If the portal URL changes, update all three links in
+`humanoids2026/index.html` and regenerate `assets/images/openreview-submission-qr.svg`
+together. Verify that the QR code rendered in the browser decodes to the same URL.
 
 **Non-archival is a proposed policy awaiting Workshop Chairs confirmation.**
 Do not announce it as confirmed. The workshop page retains “To be announced” for
@@ -126,9 +139,8 @@ information is visibly marked “To be announced” or “forthcoming.”
 
 Update `humanoids2026/index.html` when these details are confirmed:
 
-- **Submission information** (`#submission`): portal URL, review process, and
-  publication policy (including the proposed non-archival status above).
-  Add an actual submission link only once a confirmed URL is available.
+- **Submission information** (`#submission`): review process and publication
+  policy (including the proposed non-archival status above).
 - **Demos** (`#call-for-demos`, `#important-dates`): submission portal, required
   materials, paper requirement if any, submission/notification dates, selection
   process, presentation format, and logistics for simulation and physical robots.

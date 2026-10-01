@@ -119,6 +119,15 @@ p + p { margin-top: 18px; }
 .submission-info h3 { font-size: 20px; margin-bottom: 15px; }
 .submission-info > p { font-size: 15px; }
 .submission-info .details-list { margin-top: 16px; }
+.submission-portal { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-bottom: 24px; padding: 20px; border: 1px solid var(--line); border-radius: 4px; background: var(--wash); }
+.submission-portal-copy { flex: 1 1 180px; min-width: 0; }
+.submission-portal-label { color: var(--ink); font-size: 15px; font-weight: 600; }
+.submission-portal-copy .button { margin-top: 12px; }
+.submission-portal-note { margin-top: 12px; font-size: 14px; }
+.submission-qr { flex: 0 1 228px; max-width: 100%; text-align: center; }
+.submission-qr a { display: block; }
+.submission-qr img { width: 228px; background: white; }
+.submission-qr figcaption { margin-top: 8px; font-size: 13px; }
 .details-list > div { display: flex; align-items: baseline; justify-content: space-between; gap: 22px; padding-block: 13px; border-bottom: 1px solid var(--line); font-size: 13px; }
 .details-list dt { color: var(--ink); font-weight: 500; }
 .details-list dd { font-size: 13px; color: #69736c; }

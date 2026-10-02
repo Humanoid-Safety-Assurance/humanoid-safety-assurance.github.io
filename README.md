@@ -126,8 +126,9 @@ them into the shared 4:5 portrait frames.
 | --- | --- |
 | `assets/images/organizers/chuchu-chen.jpg` | [Chuchu Chen portrait](https://chuchuchen.net/images/workshop/chuchu-chen.jpg) |
 | `assets/images/organizers/zijun-sha.jpg` | [Zijun Sha portrait](https://chuchuchen.net/images/workshop/zijun-sha.jpg) |
+| `assets/images/organizers/abhijeet.jpeg` | Abhijeet Kulkarni portrait |
 
-Georgios Fainekos, Hideki Okamoto, and Abhijeet Kulkarni retain clearly labeled
+Georgios Fainekos and Hideki Okamoto retain clearly labeled
 photo placeholders. When their portraits are available, add the files under
 `assets/images/organizers/` and replace each person's
 placeholder `<div class="organizer-photo">…</div>` with an image, for example:
@@ -159,8 +160,8 @@ Update `humanoids2026/index.html` when these details are confirmed:
   equipment responsibilities are confirmed above.
 - **Invited speakers** (`#speakers`): confirmed names, affiliations, and talk
   details. No speaker identities or number of speakers have been assumed.
-- **Organizers** (`#organizers`): portraits for Georgios Fainekos, Hideki Okamoto,
-  and Abhijeet Kulkarni, plus optional personal profile links.
+- **Organizers** (`#organizers`): portraits for Georgios Fainekos and Hideki Okamoto,
+  plus optional personal profile links.
   The names, roles, and affiliations are populated from the proposal; the workshop
   email is provided separately in the Contact section.
 

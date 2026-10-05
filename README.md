@@ -15,6 +15,7 @@ in Human Environments**.
 | `assets/images/mark.svg` | Community mark and favicon; not an IEEE logo |
 | `assets/images/assurance-figure.svg` | Original illustrative humanoid diagram |
 | `assets/images/openreview-submission-qr.svg` | Static QR code for the shared paper and demo submission portal |
+| `assets/images/logos/FRC.png` | Organizer-supplied Toyota Frontier Research Center logo |
 | `.nojekyll` | Serve the static files without Jekyll processing |
 | `CNAME` | Existing custom domain configuration |
 
@@ -144,6 +145,20 @@ beside the details on phones. Keep remaining placeholders as HTML until actual
 photos are supplied, to avoid broken image URLs. Update the Contact section if
 the workshop email address changes.
 
+## Workshop logos
+
+The workshop page has four logo positions at the top of the footer, below Contact.
+There is no visible heading or sponsor/partner label. The first position uses the
+supplied `assets/images/logos/FRC.png` without a card border; the remaining three
+use subtle placeholders labeled “Logo to be added.”
+
+To fill a position, add its supplied image under `assets/images/logos/` and replace
+the corresponding `<li class="logo-slot logo-placeholder">` with
+`<li class="logo-slot">` containing an image. Use the relative path
+`../assets/images/logos/…`, meaningful alternative text, and the image's actual
+width and height. CSS preserves the artwork's proportions without cropping.
+The grid uses four columns on desktop, two on tablets, and one on phones.
+
 ## Organizer input still needed
 
 The date **December 7, 2026**, location **Santa Clara, California**, and
@@ -164,6 +179,8 @@ Update `humanoids2026/index.html` when these details are confirmed:
   plus optional personal profile links.
   The names, roles, and affiliations are populated from the proposal; the workshop
   email is provided separately in the Contact section.
+- **Workshop logos** (`#workshop-logos`): artwork and organization names
+  for the three remaining positions.
 
 The two central questions and the cross-layer safety perspective follow the
 provided workshop brief. The supporting motivation, topic descriptions, and CFP

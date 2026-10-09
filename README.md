@@ -56,14 +56,16 @@ repository Pages settings are managed separately from these source files.
 The paper submission requirements and dates come from the organizer-provided CFP text:
 
 - **Short / Position Papers:** up to 4 pages.
-- **Research Papers:** up to 6 pages.
-- **Format:** IEEE standard double-column conference format; one additional page
-  exclusively for references. Appendices are not considered part of the review
-  submission.
+- **Research Papers:** 4–8 pages recommended.
+- **Format:** IEEE standard double-column conference format; 4–8 pages recommended;
+  one additional page exclusively for references. Appendices are not considered
+  part of the review submission.
 - **Review process:** single-blind review. Authors do not need to anonymize their
   submissions, as confirmed by the organizer.
 - **Presentation:** accepted submissions will be presented as posters; selected
   contributions will additionally be invited for short spotlight presentations.
+- **Publication policy:** no formal proceedings (non-archival workshop). Authors
+  are welcome to post their papers on arXiv (preprints on arXiv are fully permitted).
 - **Paper submissions open:** October 2, 2026.
 - **Submission deadline:** October 25, 2026, 23:59 AoE.
 - **Acceptance notification:** November 2, 2026.
@@ -80,9 +82,8 @@ service. If the portal URL changes, update all OpenReview links in
 `humanoids2026/index.html` and regenerate `assets/images/openreview-submission-qr.svg`
 together. Verify that the QR code rendered in the browser decodes to the same URL.
 
-**Non-archival is a proposed policy awaiting Workshop Chairs confirmation.**
-Do not announce it as confirmed. The workshop page retains “To be announced” for
-the publication policy.
+**Publication policy is confirmed:** No formal proceedings (non-archival workshop).
+Authors are welcome to post their papers on arXiv (preprints are fully permitted).
 
 ## Call for Demos
 
@@ -143,8 +144,8 @@ information is visibly marked “To be announced” or “forthcoming.”
 
 Update `humanoids2026/index.html` when these details are confirmed:
 
-- **Submission information** (`#submission`): publication policy (including the
-  proposed non-archival status above).
+- **Submission information** (`#submission`): publication policy (non-archival,
+  arXiv permitted) and paper format (4–8 pages recommended) are confirmed.
 - **Demos** (`#call-for-demos`, `#important-dates`): submission/notification dates,
   selection process, presentation format and schedule, and on-site setup
   arrangements. File format, title labeling, demo materials, and applicant

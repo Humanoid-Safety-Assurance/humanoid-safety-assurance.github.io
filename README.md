@@ -128,22 +128,12 @@ them into the shared 4:5 portrait frames.
 | `assets/images/organizers/zijun-sha.jpg` | [Zijun Sha portrait](https://chuchuchen.net/images/workshop/zijun-sha.jpg) |
 | `assets/images/organizers/abhijeet.jpeg` | Abhijeet Kulkarni portrait |
 | `assets/images/organizers/hideki-okamoto.jpg` | Hideki Okamoto portrait |
+| `assets/images/organizers/georgios-fainekos.jpg` | Georgios Fainekos portrait |
 
-Georgios Fainekos retains a clearly labeled
-photo placeholder. When his portrait is available, add the file under
-`assets/images/organizers/` and replace the
-placeholder `<div class="organizer-photo">…</div>` with an image, for example:
-
-```html
-<img class="organizer-photo" src="../assets/images/organizers/zijun-sha.jpg"
-     width="240" height="300" alt="Zijun Sha" loading="lazy">
-```
-
-Keep the `organizer-photo` class and a 4:5 portrait crop. The layout uses a row of
-five cards on wide screens, three columns on tablets, and one column with photos
-beside the details on phones. Keep remaining placeholders as HTML until actual
-photos are supplied, to avoid broken image URLs. Update the Contact section if
-the workshop email address changes.
+All organizers now have portrait images in place. Keep the `organizer-photo` class
+and a 4:5 portrait crop. The layout uses a row of five cards on wide screens, three
+columns on tablets, and one column with photos beside the details on phones.
+Update the Contact section if the workshop email address changes.
 
 ## Organizer input still needed
 
@@ -161,8 +151,7 @@ Update `humanoids2026/index.html` when these details are confirmed:
   equipment responsibilities are confirmed above.
 - **Invited speakers** (`#speakers`): confirmed names, affiliations, and talk
   details. No speaker identities or number of speakers have been assumed.
-- **Organizers** (`#organizers`): portrait for Georgios Fainekos,
-  plus optional personal profile links.
+- **Organizers** (`#organizers`): optional personal profile links.
   The names, roles, and affiliations are populated from the proposal; the workshop
   email is provided separately in the Contact section.
 

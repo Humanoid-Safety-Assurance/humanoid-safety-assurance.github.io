@@ -180,6 +180,10 @@ p + p { margin-top: 18px; }
 .organizer-affiliation { margin-top: 4px; font-size: 14px; }
 .speaker-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 28px; }
 .speaker-grid .organizer-photo { max-width: 220px; }
+.speaker-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.speaker-silhouette { overflow: hidden; align-items: flex-end; background: #e6ede8; border-style: dashed; }
+.speaker-silhouette svg { width: 72%; height: auto; fill: #b9c9bf; }
+.speaker-placeholder-card .organizer-affiliation { color: var(--teal); font-weight: 600; }
 .workshop-badges { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 22px; margin: 14px 0 22px; }
 .workshop-badges .workshop-type { margin: 0; }
 .workshop-badges .conference-logo { display: block; height: 70px; width: auto; mix-blend-mode: multiply; }
@@ -218,6 +222,7 @@ p + p { margin-top: 18px; }
 .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-block: 40px 30px; }
 .footer-main .brand { font-size: 12px; gap: 10px; }
 .footer-main p { font-size: 12px; }
+.footer-conference-logo { height: 38px; width: auto; max-width: 180px; object-fit: contain; mix-blend-mode: multiply; }
 .footer-main > a:not(.brand) { font-size: 12px; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; gap: 14px; }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 19px 24px; border-top: 1px solid var(--line); font-size: 10px; letter-spacing: .2px; }
 .footer-bottom a { text-decoration: none; display: inline-flex; align-items: center; gap: 10px; min-height: 32px; }

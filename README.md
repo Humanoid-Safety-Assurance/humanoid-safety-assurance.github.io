@@ -67,14 +67,15 @@ The paper submission requirements and dates come from the organizer-provided CFP
 - **Publication policy:** no formal proceedings (non-archival workshop). Authors
   are welcome to post their papers on arXiv (preprints on arXiv are fully permitted).
 - **Paper submissions open:** October 2, 2026.
-- **Submission deadline:** October 25, 2026, 23:59 AoE.
-- **Acceptance notification:** November 2, 2026.
+- **Demo submissions open:** Open now.
+- **Submission deadline (Paper & Demo):** November 15, 2026, 23:59 AoE (extended).
+- **Review notifications:** Rolling basis from November 2 to November 20, 2026.
+- **Workshop day:** December 7, 2026.
 
 The confirmed submission portal for papers and demos is
 [OpenReview](https://openreview.net/group?id=IEEE.org/RAS/Humanoids/2026/Workshop/Trustworthy_Humanoid_Systems).
 The hero link, both submission buttons, and clickable QR code use this exact URL,
-with no fragment. The paper opening date remains October 2, 2026. Demo dates and
-presentation arrangements still need organizer confirmation.
+with no fragment. Paper and demo submissions share the November 15 deadline.
 
 The QR code is a pre-generated, local SVG with a white background, a four-module
 quiet zone, and Q error correction. It needs no browser library or external QR

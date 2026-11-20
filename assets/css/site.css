@@ -180,7 +180,6 @@ p + p { margin-top: 18px; }
 .organizer-affiliation { margin-top: 4px; font-size: 14px; }
 .speaker-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 28px; }
 .speaker-grid .organizer-photo { max-width: 220px; }
-.speaker-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .speaker-silhouette { overflow: hidden; align-items: flex-end; background: #e6ede8; border-style: dashed; }
 .speaker-silhouette svg { width: 72%; height: auto; fill: #b9c9bf; }
 .speaker-placeholder-card .organizer-affiliation { color: var(--teal); font-weight: 600; }
